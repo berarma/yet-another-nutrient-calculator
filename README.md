@@ -1,4 +1,14 @@
-# [Yet Another Nutrient Calculator](http://rota.la)
+# Yet Another Nutrient Calculator
+
+This project was hosted by @flores at (http://rota.la). This is an intent to
+keep the original project running for all aquarium keepers and as a tribute to
+@flores.
+
+## Installing on Debian Jessie
+
+  apt-get install ruby-sinatra ruby-haml ruby-rdiscount thin
+  gem install sinatra-r18n
+  rackup -p 8800
 
 ## Features
 
