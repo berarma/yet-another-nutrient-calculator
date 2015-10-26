@@ -176,7 +176,7 @@ class YANC < Sinatra::Base
         @method_instruct    = @method_instruct + "<br /> <br />" + t.methods_text.ada
       end
 
-      if (@dose_method == 'sol' && source == 'diy')
+      if (@dose_method == 'solution' && source == 'diy')
         @sol_vol    = unfractionify(Float(params["sol_volume"]))
         @sol_dose    = unfractionify(Float(params["sol_dose"]))
         dose_calc     = @dose_amount * @sol_dose / @sol_vol
@@ -215,7 +215,7 @@ class YANC < Sinatra::Base
 	cons_element = Float(cons["#{@element}"])
 	@mydose = @target_amount * tank_vol / cons_element
         @mydose = sprintf("%.#{@round_to}f", @mydose).to_i
-        if (@dose_method == /sol/)
+        if (@dose_method == 'solution')
           @dose_amount = @mydose * @sol_vol / @sol_dose
           sol_check = @dose_amount
         else
