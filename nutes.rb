@@ -41,7 +41,10 @@ class YANC < Sinatra::Base
     '/bootstrap/css/bootstrap.min.css',
     '/bootstrap/css/bootstrap.css',
     '/bootstrap/img/glyphicons-halflings-white.png',
-    '/bootstrap/img/glyphicons-halflings.png'
+    '/bootstrap/img/glyphicons-halflings.png',
+    '/jquery.form.js',
+    '/waypoints.min.js',
+    '/highcharts.js'
     ].each do |staticfile|
 
     get staticfile do
